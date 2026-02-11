@@ -1,0 +1,180 @@
+/* ============================= */
+/* ESTILO BASE */
+/* ============================= */
+
+body {
+    background: linear-gradient(180deg, #f2f2f7, #e5e5ea);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        "Segoe UI", Roboto, sans-serif;
+}
+
+/* Container do conteúdo */
+#conteudo {
+    padding: 40px 0;
+}
+
+/* ============================= */
+/* TÍTULO */
+/* ============================= */
+
+.titulo-contato {
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 25px;
+    font-size: 26px;
+    color: #1c1c1e;
+}
+
+/* ============================= */
+/* CARD PRINCIPAL */
+/* ============================= */
+
+#formContato {
+    max-width: 480px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    border-radius: 28px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+}
+
+/* ============================= */
+/* INPUTS */
+/* ============================= */
+
+.input-group-custom {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group-custom label {
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #6e6e73;
+    font-weight: 500;
+}
+
+.input-group-custom input,
+.input-group-custom textarea {
+    padding: 14px 16px;
+    border-radius: 18px;
+    border: 1px solid #d1d1d6;
+    background: #f9f9fb;
+    font-size: 15px;
+    transition: all 0.25s ease;
+    outline: none;
+    resize: none;
+}
+
+.input-group-custom input:focus,
+.input-group-custom textarea:focus {
+    background: #ffffff;
+    border: 1px solid #0071e3;
+    box-shadow: 0 0 0 4px rgba(0, 113, 227, 0.15);
+}
+
+/* Erro */
+.input-group-custom .erro {
+    font-size: 12px;
+    color: #ff3b30;
+    margin-top: 4px;
+    min-height: 16px;
+}
+
+.erro-ativo input,
+.erro-ativo textarea {
+    border: 1px solid #ff3b30;
+    background: #fff5f5;
+}
+
+/* ============================= */
+/* BOTÃO */
+/* ============================= */
+
+.btn-enviar {
+    width: 100%;
+    padding: 14px;
+    border-radius: 22px;
+    border: none;
+
+    background: linear-gradient(135deg, #0071e3, #0051a8);
+    color: white;
+
+    font-weight: 600;
+    font-size: 16px;
+
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0, 113, 227, 0.3);
+}
+
+.btn-enviar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(0, 113, 227, 0.4);
+}
+
+.btn-enviar:active {
+    transform: scale(0.97);
+}
+
+/* ============================= */
+/* MODAL iOS */
+/* ============================= */
+
+.modal-content {
+    border-radius: 28px;
+    border: none;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(25px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+}
+
+.modal-header {
+    border-bottom: none;
+    padding: 20px 25px 10px 25px;
+}
+
+.modal-body {
+    padding: 15px 25px;
+}
+
+.modal-footer {
+    border-top: none;
+    padding: 15px 25px 25px 25px;
+}
+
+/* ============================= */
+/* RESPONSIVO */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+    #conteudo {
+        padding: 30px 15px;
+    }
+
+    #formContato {
+        padding: 25px;
+    }
+
+    .titulo-contato {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    #formContato {
+        padding: 20px;
+    }
+
+    .input-group-custom input,
+    .input-group-custom textarea {
+        padding: 12px;
+    }
+}

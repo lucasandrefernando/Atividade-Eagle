@@ -1,0 +1,83 @@
+<link rel="stylesheet" href="contato.css">
+
+<h2 class="titulo-contato">Fale Conosco</h2>
+
+<form id="formContato" novalidate>
+
+    <div class="input-group-custom">
+        <label>Nome</label>
+        <input type="text" id="nome">
+        <small class="erro"></small>
+    </div>
+
+    <div class="input-group-custom">
+        <label>Email</label>
+        <input type="text" id="email">
+        <small class="erro"></small>
+    </div>
+
+    <div class="input-group-custom">
+        <label>Telefone</label>
+        <input type="text" id="telefone">
+        <small class="erro"></small>
+    </div>
+
+    <div class="input-group-custom">
+        <label>Mensagem</label>
+        <textarea id="mensagem" rows="4"></textarea>
+        <small class="erro"></small>
+    </div>
+
+    <button type="submit" class="btn-enviar">
+        Enviar Mensagem
+    </button>
+
+</form>
+
+
+<!-- MODAL CONFIRMAÇÃO -->
+<div class="modal fade" id="modalConfirmacao" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content modal-custom">
+
+            <div class="modal-header">
+                <h5 class="modal-title">Confirmar Envio</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+
+                <div class="resumo-item">
+                    <strong>Nome:</strong>
+                    <span id="confNome"></span>
+                </div>
+
+                <div class="resumo-item">
+                    <strong>Email:</strong>
+                    <span id="confEmail"></span>
+                </div>
+
+                <div class="resumo-item">
+                    <strong>Telefone:</strong>
+                    <span id="confTelefone"></span>
+                </div>
+
+                <div class="resumo-item">
+                    <strong>Mensagem:</strong>
+                    <p id="confMensagem"></p>
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                    Cancelar
+                </button>
+                <button type="button" class="btn btn-success" onclick="confirmarEnvio()">
+                    Confirmar
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>

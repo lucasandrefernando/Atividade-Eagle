@@ -1,0 +1,87 @@
+body.empresa-page {
+    overflow: hidden;
+}
+
+body.empresa-page #conteudo {
+    padding: 0;
+    height: 100%;
+}
+
+/* APP CONTAINER */
+.empresa-app {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: linear-gradient(145deg, #f5f7fa, #e4e9f2);
+}
+
+/* ÁREA CENTRAL */
+.empresa-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 40px;
+}
+
+/* SEÇÕES */
+.empresa-section {
+    display: none;
+    text-align: center;
+    max-width: 600px;
+    animation: fadeSlide 0.4s ease;
+}
+
+.empresa-section.active {
+    display: block;
+}
+
+.empresa-section h2 {
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #0d6efd, #00c6ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.empresa-section p {
+    font-size: 1.1rem;
+    color: #444;
+}
+
+/* TABBAR */
+.empresa-tabbar {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    background: white;
+    border-top: 1px solid #ddd;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.tab-item {
+    background: none;
+    border: none;
+    font-weight: 600;
+    color: #777;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tab-item.active {
+    color: #0d6efd;
+    transform: scale(1.1);
+}
+
+/* ANIMAÇÃO */
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,60 @@
+.servicos-wrapper {
+    padding: 40px 0;
+}
+
+/* GRID */
+.servicos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 60px;
+}
+
+@media (max-width: 992px) {
+    .servicos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .servicos-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.servico-card {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* CARROSSEL */
+
+.carrossel-wrapper {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.carrossel-container {
+    width: 320px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carrossel-track {
+    display: flex;
+    width: max-content;
+    transition: transform 0.6s ease-in-out;
+}
+
+.plano-card {
+    flex: 0 0 320px;
+    background: #111;
+    color: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    margin-right: 15px;
+}
