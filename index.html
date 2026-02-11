@@ -3,59 +3,43 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Eagle Telecom - Página Simples</title>
+    <title>Eagle Telecom - Página Institucional</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- BOOTSTRAP 5 (atual) -->
+    <!-- bootstrap 5 via cdn -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <style>
-        /* sidebar simples */
-        .sidebar {
-            height: 100vh;
-            background: #343a40;
-            color: white;
-            padding-top: 20px;
-        }
-
-        .sidebar a {
-            color: white;
-            text-decoration: none;
-        }
-
-        .sidebar a:hover {
-            color: #ddd;
-        }
-
-        /* footer só pra ficar bonito */
-        footer {
-            background: #f1f1f1;
-            padding: 10px 0;
-        }
-    </style>
+    <!-- css proprio -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- NAVBAR top -->
+    <!-- navbar principal -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="#">Eagle Telecom</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
-                aria-controls="navMenu" aria-expanded="false">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navMenu">
+            <div class="collapse navbar-collapse" id="menuPrincipal">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Quem Somos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Serviços</a></li>
                     <li class="nav-item">
-                        <!-- botão pronto p/ abrir modal info -->
-                        <button class="btn btn-sm btn-outline-light ms-2" data-bs-toggle="modal"
-                            data-bs-target="#infoModal">
-                            + Info
+                        <a class="nav-link" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contato</a>
+                    </li>
+                    <li class="nav-item">
+                        <!-- botao p abrir modal -->
+                        <button class="btn btn-outline-light btn-sm ms-2" data-bs-toggle="modal"
+                            data-bs-target="#modalInfo">
+                            Sobre
                         </button>
                     </li>
                 </ul>
@@ -67,85 +51,77 @@
     <div class="container-fluid">
         <div class="row">
 
-            <!-- SIDEBAR lateral -->
-            <div class="col-md-3 sidebar">
-                <h5 class="text-center">Menu Side</h5>
-                <ul class="list-unstyled ps-3">
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Missão / Visão</a></li>
-                    <li><a href="#">Contato</a></li>
-                    <li><a href="#">Localização</a></li>
+            <!-- menu lateral simples -->
+            <aside class="col-md-3 sidebar p-3">
+                <h5>Menu Lateral</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Quem somos</a></li>
+                    <li><a href="#">Telefonia IP</a></li>
+                    <li><a href="#">Contact Center</a></li>
+                    <li><a href="#">Suporte Tecnico</a></li>
                 </ul>
-            </div>
+            </aside>
 
-            <!-- CONTEÚDO principal -->
-            <div class="col-md-9 p-4">
-                <h1>Bem-vindo à Eagle Telecom!</h1>
+            <!-- conteudo principal -->
+            <main class="col-md-9 p-4">
+                <h1>Bem vindo a Eagle Telecom</h1>
 
-                <!-- texto que peguei do site real (resumido) -->
                 <p>
-                    A <strong>Eagle Telecom</strong> é uma empresa de telecomunicaçoes fundada em 2005,
-                    com sede em Belo Horizonte, Minas Gerais, oferecendo soluções de comunicação e
-                    tecnologia pras empresas <small>(resumo do site real)</small>. :contentReference[oaicite:0]{index=0}
+                    A Eagle Telecom é uma empresa de telecomunicações localizada em Belo Horizonte,
+                    especializada em soluções de comunicação corporativa.
                 </p>
 
-                <h3>O que fazemos</h3>
-                <ul>
-                    <li>Telefonia IP</li>
-                    <li>Sistemas de Contact Center</li>
-                    <li>ChatBots e Integração com WhatsApp</li>
-                    <li>Soluções de comunicação unificada e suporte técnico</li>
-                </ul>
-
-                <hr>
-
-                <h4>Contato</h4>
                 <p>
-                    📍 Rua Machado Nunes, 116 - Cj 301 - Caiçara, Belo Horizonte, MG<br>
-                    ☎️ (31) 4501-2600<br>
-                    ✉️ contato@eagletelecom.com.br<br>
-                    ⏱️ Atendimento: Seg a Sex 9h às 18h :contentReference[oaicite:1]{index=1}
+                    Atuamos com Telefonia IP, PABX virtual, Contact Center,
+                    integração com WhatsApp e outras soluções voltadas para empresas.
                 </p>
 
-            </div>
-            <!-- fim conteudo principal -->
+                <div class="card mt-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Nosso Objetivo</h5>
+                        <p class="card-text">
+                            Melhorar a comunicação das empresas através de tecnologia,
+                            oferecendo suporte especializado e soluções modernas.
+                        </p>
+                    </div>
+                </div>
+            </main>
 
         </div>
     </div>
 
-    <!-- FOOTER simples -->
-    <footer class="text-center">
-        <p>© 2026 - Projeto Feito Pelo Lucas :)</p>
+    <!-- footer simples -->
+    <footer class="text-center mt-4">
+        <p>© 2026 Eagle Telecom - Projeto de estudo</p>
     </footer>
 
-    <!-- MODAL info extra -->
-    <div class="modal fade" id="infoModal" tabindex="-1">
+    <!-- modal -->
+    <div class="modal fade" id="modalInfo" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Mais sobre a Eagle</h5>
+                    <h5 class="modal-title">Sobre a Empresa</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
                     <p>
-                        A Eagle Telecom atua com consultoria e suporte técnico especializado,
-                        voltado pra empresa que precisa melhorar comunicação e produtividade.
-                        :contentReference[oaicite:2]{index=2}
+                        Empresa fundada em 2005, atuando no mercado de telecomunicações
+                        e oferecendo soluções personalizadas para empresas.
                     </p>
                     <p>
-                        Ela tem parceiros em varias marcas de equipamentos e trabalha
-                        com PABX, Centrais, Redes e Videoconferências entre outros.
+                        Atendimento de segunda a sexta em horário comercial.
                     </p>
-                    <small>Obs: tem mais info no site original.</small>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">
+                        Fechar
+                    </button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- BOOTSTRAP JS (necessario p/ modal) -->
+    <!-- js bootstrap necessario p modal funcionar -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
